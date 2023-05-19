@@ -32,6 +32,7 @@ export function Product () {
                     <span className='icon-cart-add' />
                   </button>
                 </div>
+                <p />
               </div>
 
             </article>
