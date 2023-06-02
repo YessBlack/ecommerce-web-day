@@ -1,5 +1,5 @@
 import { useSearch } from '../hooks/useSearch'
-import { Menu } from './Menu'
+import { Filters } from './Filters'
 
 export function Header () {
   const { setSearch } = useSearch()
@@ -17,7 +17,11 @@ export function Header () {
       </div>
       <div className='flex flex-wrap items-center justify-center sm:justify-between sm:p-4 shadow mb-4 py-4 gap-4 bg-white'>
         <h1 className='font-bold text-lg border-none outline-none focus:outline-none'>Tecno-<span className='bg-orange-500 p-1'>Shop</span></h1>
-        <Menu />
+        <div className='flex items-center justify-center'>
+          <ul className='flex items-center gap-4 justify-center'>
+            <Filters />
+          </ul>
+        </div>
         <div className='flex items-center justify-center gap-4'>
           <div className='relative'>
             <form onSubmit={handleSubmitQuery}>
