@@ -9,3 +9,9 @@ export const getProductsByCategory = async (category) => {
   const data = await response.json()
   return data
 }
+
+export const getProductByQuery = async (query) => {
+  const response = await fetch(`https://dummyjson.com/products/search?q=${query}`)
+  const data = await response.json()
+  return data
+}
