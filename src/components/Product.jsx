@@ -1,4 +1,5 @@
 import { useProducts } from '../hooks/useProducts'
+import { Rating } from './Rating'
 
 export function Product () {
   const { products } = useProducts()
@@ -17,6 +18,7 @@ export function Product () {
               />
               <div className='px-4'>
                 <h2 className='font-bold'>{product.title}</h2>
+                <Rating value={product.rating} />
                 <div className='flex items-center justify-between'>
                   {
                   product.discountPercentage > 0
@@ -32,7 +34,6 @@ export function Product () {
                     <span className='icon-cart-add' />
                   </button>
                 </div>
-                <p />
               </div>
 
             </article>
